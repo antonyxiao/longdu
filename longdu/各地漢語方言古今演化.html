@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)http://www.kaom.net/si_history8.php?g=g&jinyin=diao&city=A370&no=0&%E6%9F%A5%E8%A9%A2=%E6%9F%A5+%E8%A9%A2 -->
+<html><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/content/location/location.js" id="eppiocemhmnlbhjplcgkofciiegomcon"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>各地漢語方言古今演化</title>
+    <meta name="description" content="">
+    <!--<base target="_blank">--><base href="." target="_blank">
+    <script type="text/javascript">
+        function checkAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                if((el[i].type=="checkbox") && (el[i].name==name)) {
+                    el[i].checked = true;
+                }
+            }
+        }
+        function clearAll(name) {
+            var el = document.getElementsByTagName('input');
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                if((el[i].type=="checkbox") && (el[i].name==name)) {
+                    el[i].checked = false;
+                }
+            }
+        }
+        function checkAll2(name) {
+            var el = document.getElementsByClassName(name);
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                el[i].checked = true;
+            }
+        }
+        function clearAll2(name) {
+            var el = document.getElementsByClassName(name);
+            var len = el.length;
+            for(var i=0; i<len; i++) {
+                el[i].checked = false;
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /* 下拉內容 */
+        .dropdown{
+            position:relative;
+            display:inline-block;
+            padding: 0px;
+            margin: 0px;
+        }
+        /* 下拉式功能表內容設置為隱藏 */
+        .dropdown-content{
+            width:120px;
+            background:#162436;
+            position:absolute;
+            right:0;
+            display:none;
+            box-shadow:0px 8px 15px 0px rgba(0,0,0,0.2);
+            z-index:100;
+        }
+        /* 下拉按鈕樣式 */
+        .dropbtn{
+            color:white;
+            font-size:13px;
+            padding: 13px 8px; /* 控制條紋高度重要 */
+            border:none;
+            background:#2a3c54;
+            cursor:pointer;
+        }
+        .dropbtn2{
+            color:white;
+            font-size:13px;
+            padding: 13px 8px; /* 控制條紋高度重要 */
+            border:none;
+            background:#aa334c;
+            cursor:pointer;
+        }
+        /* 下拉式功能表連結 */
+        .dropdown-content a{
+            color:white;
+            text-decoration:none;
+            padding:8px 20px;
+            display:block;
+            font-size: 12px;
+        }
+        /* 滑鼠移入後顯示下拉式功能表 */
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        /* 滑鼠移入後修改連結的背景色 */
+        .dropdown-content a:hover{
+            background:#aa334c;
+        }
+        /* 滑鼠移入背景色 */
+        .form_b:hover{
+            background:#ca334c;
+        }
+        /* 下拉式功能表顯示後修改下拉按鈕的背景色 */
+        .dropdown:hover .dropbtn{
+            background:#162436;
+        }
+        .dropdown:hover .dropbtn2{
+            background:#162436;
+        }
+        /*頁面上的橫條*/
+        .header{
+            background: #2a3c54;
+            width: 96%;
+            padding: 0px 2%;
+            margin: 0px auto;
+            text-align: right;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: KaiXinSong;
+            font-size: 15px;
+            background: #ddd;
+            -webkit-text-size-adjust:none;
+        }
+        .win{
+            max-width: 1200px;
+            margin:0px auto;
+            background: #fff;
+            box-shadow: darkgrey 0px 0px 6px 5px ;
+        }
+        table {
+            width:92%;
+            margin:50px auto;
+            border-collapse:collapse;
+            color: #000;
+            text-align: center;
+            vertical-align:center;
+            line-height: 22px;
+        }
+        th {
+            font-size:13px;
+            color: #ddd;
+            background: #2a3c54;
+            padding:1px 2px;
+        }
+        td {
+            font-size:14px;
+            color: #333;
+            background: #eee;
+            border:1px solid #ddd;
+            /*word-wrap:break-word;強制換行*/
+            /*word-break:break-all;強制換行*/
+        }
+        caption{
+            color: #555;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        th.red{
+            background: #aa334c;
+            color: #fff;
+            width: 140px;
+        }
+        .table_mini{
+            width: 88%;
+        }
+        .td_footer{
+            height:20px;
+            background:#666;
+            color:#ccc;
+            font-size: 13px;
+        }
+        .table_mini td{
+            background: #f8f8f8;
+            font-size: 12px;
+        }
+
+        .form_1{
+            font-size: 14px;
+            height: 36px;
+            line-height: 36px;  /*垂直居中*/
+            border:1px solid #aaa;
+            padding: 0px 0px 0px 5px;
+            vertical-align:bottom;
+        }
+        .form_2{
+            background: #2a3c54;
+            color: #fff;
+            font-size: 14px;
+            width: 120px;
+            height: 38px;
+            line-height: 36px;   /*垂直居中*/
+            border:none;
+            vertical-align:bottom;
+        }
+        .form_2:hover{
+            background: #aa334c;
+            box-shadow:0px 3px 6px 0px rgba(0,0,0,0.2);
+        }
+
+        /*全選、清空按鈕*/
+        input[type="button"] {
+            height:22px;
+            width: 38px;
+            font-size: 12px;
+        }
+
+        /*以下4個是電子字樣式*/
+        .box_main{
+            margin: 50px auto 20px auto;
+            max-width:90%;
+            text-align: center;
+            width: 92%;
+        }
+        .box_div{
+            width: 60px;
+            height: 38px;
+            margin:5px;
+            padding: 12px 2px;
+            background: #2a3c54;
+            display: inline-block;
+            font-size: 32px;
+            color:#eee;
+            vertical-align: middle;
+            text-align: center;
+            line-height:22px;
+        }
+        .box_div_mini{
+            width: 25px;
+            height: 25px;
+            margin:2px;
+            padding: 2px 2px;
+            background: #2a3c54;
+            display: inline-block;
+            font-size: 18px;
+            color:#eee;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .box_div:hover,.box_div_mini:hover {
+            background: #aa334c;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+        }
+        .right{
+            color:#aa334c;
+        }
+        .wrong{
+            color:#2a3c54;
+        }
+        .error{
+            text-align: center;
+            font-size: 13px;
+            margin: 45px auto 45px auto;
+            line-height: 20px;
+            background: #eee;
+            width: 500px;
+            padding: 20px 35px;
+            border-radius:5px;
+            color: #aa334c;
+            font-weight: bold;
+        }
+        .kuangjia {
+            background: #f8f8f8;
+            width: 96%;
+            text-align: center;
+            margin: 20px auto;
+            overflow: scroll
+        }
+        i{
+            font-size: 12px;
+            color: #888;
+            font-style: normal;
+        }
+        b{
+            font-size: 14px;
+            color: #aa334c;
+        }
+        td a:link,.link a:link {color:blue;text-decoration:none;}    /*未被訪問的連結*/
+        td a:visited,.link a:visited {color:blue;text-decoration:none;}     /*已被訪問的連結*/
+        td a:hover,.link a:hover {color:#aa334c;text-decoration:none;}    /*滑鼠指標移動到連結上*/
+        td a:active,.link a:active {color:#fff;text-decoration:none;}   /*正在被點擊的連結*/
+        a:link {text-decoration:none;}
+        a:visited {text-decoration:none;}
+        a:hover {text-decoration:none;}
+        a:active {text-decoration:none;}
+    </style>
+<script bis_use="true" type="text/javascript" charset="utf-8" data-bis-config="[&quot;facebook.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&quot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quot;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;soundcloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2follow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;//keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-extension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/checkout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captcha.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/customerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contacts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quot;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.net/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executers/vi-tr.js"></script></head>
+<body __processed_455d7ff2-572b-493a-9af6-83c0cef3f1c2__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d">
+<div class="header" bis_skin_checked="1">
+        <div style="float: left;text-align: right;margin-left: 10px" bis_skin_checked="1">
+            <div class="dropdown" bis_skin_checked="1">
+                <a href="http://www.kaom.net/index.php"><button type="button" class="dropbtn2" style="background: #2a3c54">返回首頁</button></a>
+            </div>
+
+            <div class="dropdown" bis_skin_checked="1">
+                <button type="button" class="dropbtn2">苗瑤語</button>
+                <div class="dropdown-content" bis_skin_checked="1">
+                    <a href="http://www.kaom.net/min_z_hmongmien.php">苗瑤語素</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=hmongmien">對應詞表</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=hmongmien"><span style="color: orange">🌵</span> 關係樹</a>
+                </div>
+            </div>
+            <div class="dropdown" bis_skin_checked="1">
+                <button type="button" class="dropbtn2">侗台語</button>
+                <div class="dropdown-content" bis_skin_checked="1">
+                    <a href="http://www.kaom.net/min_z_kamtai.php">侗台語素</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=kamtai">對應詞表</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=kamtai"><span style="color: orange">🌵</span> 關係樹</a>
+                </div>
+            </div>
+            <div class="dropdown" bis_skin_checked="1">
+                <button type="button" class="dropbtn2">漢藏語</button>
+                <div class="dropdown-content" bis_skin_checked="1">
+                    <a href="http://www.kaom.net/min_z_qiang.php"><span style="color: orange">✿</span> 羌語素</a>
+                    <a href="http://www.kaom.net/min_z_zang.php"><span style="color: orange">✿</span> 藏語素</a>
+                    <a href="http://www.kaom.net/min_z_ni.php"><span style="color: orange">✿</span> 尼語素</a>
+                    <a href="http://www.kaom.net/min_z_bo.php"><span style="color: orange">✿</span> 僰語素</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=qiang">羌對應詞表</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=zang">藏對應詞表</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=ni">尼對應詞表</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=bo">僰對應詞表</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=qiang"><span style="color: orange">🌵</span> 羌關係樹</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=zang"><span style="color: orange">🌵</span> 藏關係樹</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=ni"><span style="color: orange">🌵</span> 尼關係樹</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=bo"><span style="color: orange">🌵</span> 僰關係樹</a>
+                    <a href="http://www.kaom.net/mat_word.php">附：詞彙查詢</a>
+                </div>
+            </div>
+            <div class="dropdown" bis_skin_checked="1">
+                <button type="button" class="dropbtn2">南亞語</button>
+                <div class="dropdown-content" bis_skin_checked="1">
+                    <a href="http://www.kaom.net/min_z_austroasiatic.php">南亞語素</a>
+                    <a href="http://www.kaom.net/min_yusu_table.php?t=austroasiatic">對應表</a>
+                    <a href="http://www.kaom.net/min_tree.php?t=austroasiatic"><span style="color: orange">🌵</span> 關係樹</a>
+                    <a href="http://www.kaom.net/min_nanya.php">附：詞彙查詢</a>
+                </div>
+            </div>
+            <div class="dropdown" bis_skin_checked="1">
+                <button type="button" class="dropbtn2">南島語</button>
+                <div class="dropdown-content" bis_skin_checked="1">
+                    <a href="http://www.kaom.net/min_nandao.php">詞彙查詢</a>
+                    <a href="http://www.kaom.net/min_nandao_table.php">語言點</a>
+                </div>
+            </div>
+        </div>
+
+    <div class="dropdown" bis_skin_checked="1">
+        <button type="button" class="dropbtn">上古音</button>
+        <div class="dropdown-content" bis_skin_checked="1">
+            <a href="http://www.kaom.net/yayuns_net.php">① 先秦韻</a>
+            <a href="http://www.kaom.net/sgy_xs.php">② 聲符</a>
+            <a href="http://www.kaom.net/sgy_jj_xilian.php">③ 假借</a>
+            <a href="http://www.kaom.net/sgy_yidu.php">④ 異讀</a>
+            <a href="http://www.kaom.net/sgy_shengxun.php">⑤ 聲訓</a>
+            <a href="http://www.kaom.net/sgy_fanhan.php">⑥ 梵漢</a>
+            <a href="http://www.kaom.net/sgy_xs_guilv.php">附：諧聲規律</a>
+        </div>
+    </div>
+    <div class="dropdown" bis_skin_checked="1">
+        <button type="button" class="dropbtn">構擬</button>
+        <div class="dropdown-content" bis_skin_checked="1">
+            <a href="http://www.kaom.net/ny_word.php"><span style="color: orange">✿</span> 擬音查詢</a>
+            <a href="http://www.kaom.net/ny_contrast.php"><span style="color: orange">✿</span> 音系比較</a>
+            <a href="http://www.kaom.net/ny_yun.php"><span style="color: orange">✿</span> 韻部結構</a>
+            <a href="http://www.kaom.net/ny_box.php?name=gaobenhan">高本漢 1940</a>
+            <a href="http://www.kaom.net/ny_box.php?name=dongtonghe">董同龢 1944</a>
+            <a href="http://www.kaom.net/ny_box.php?name=wangli">王力 1957</a>
+            <a href="http://www.kaom.net/ny_box.php?name=lifanggui">李方桂 1971</a>
+            <a href="http://www.kaom.net/ny_box.php?name=zhoufagao">周法高 1973</a>
+            <a href="http://www.kaom.net/ny_box.php?name=sita_a">斯塔① 1989</a>
+            <a href="http://www.kaom.net/ny_box.php?name=sita_b">斯塔② 1989</a>
+            <a href="http://www.kaom.net/ny_box.php?name=sita_s">斯塔③ 1989</a>
+            <a href="http://www.kaom.net/ny_box.php?name=baiyiping">白一平 1992</a>
+            <a href="http://www.kaom.net/ny_box.php?name=zhengzhang">鄭張 2003</a>
+            <a href="http://www.kaom.net/ny_box.php?name=panwuyun">潘悟雲 2024</a>
+            <a href="http://www.kaom.net/ny_box.php?name=xusilai">許思萊 2008</a>
+            <a href="http://www.kaom.net/ny_box.php?name=jinlixin">金理新 2013</a>
+            <a href="http://www.kaom.net/ny_box.php?name=baisha">白-沙 2014</a>
+            <a href="http://www.kaom.net/ny_box.php?name=guoxiliang_biaogao">郭錫良 2018</a>
+
+        </div>
+    </div>
+    <div class="dropdown" bis_skin_checked="1">
+        <button type="button" class="dropbtn">古文字</button>
+        <div class="dropdown-content" bis_skin_checked="1">
+            <a href="http://www.kaom.net/jgw.php">甲骨字形庫</a>
+            <a href="http://www.kaom.net/jw.php">金文字形庫</a>
+            <a href="http://www.kaom.net/jianc.php"><span style="color: orange">✿</span> 楚簡字形庫</a>
+            <a href="http://www.kaom.net/swxz.php">小篆部件譜</a>
+            <a href="http://www.kaom.net/guwenzi_note.php">簡介</a>
+        </div>
+    </div>
+    <div class="dropdown" bis_skin_checked="1">
+        <button type="button" class="dropbtn">漢語地理</button>
+        <div class="dropdown-content" bis_skin_checked="1">
+            <a href="http://www.kaom.net/si_word.php">單字查詢[圖]</a>
+            <a href="http://www.kaom.net/si_words.php">單字對比[圖]</a>
+            <a href="http://www.kaom.net/si_mid.php">音類查詢[圖]</a>
+            <a href="http://www.kaom.net/si_mids.php">音類對比[圖]</a>
+            <a href="http://www.kaom.net/si_goto.php">演化統計[圖]</a>
+            <a href="http://www.kaom.net/si_ci.php">詞彙地理[圖]</a>
+            <a href="http://www.kaom.net/si_box.php">音系</a>
+            <a href="http://www.kaom.net/si_history.php">古今演化</a>
+            <a href="http://www.kaom.net/si_many.php">批量查詢</a>
+            <a href="http://www.kaom.net/si_yuwaiyin.php">日韓越音</a>
+            <a href="http://www.kaom.net/si_evo.php">新老派音變</a>
+            <a href="http://www.kaom.net/si_ipa.php">音素統計</a>
+            <a href="http://www.kaom.net/si_net_ci.php">詞彙距離</a>
+            <a href="http://www.kaom.net/si_net_yin.php">語音距離</a>
+            <a href="http://www.kaom.net/si_time.php">分手表</a>
+            <a href="http://www.kaom.net/si_times.php">分手圖</a>
+            <a href="http://www.kaom.net/si_timex.php">內部縱深</a>
+            <a href="http://www.kaom.net/si_tree.php">關係樹</a>
+            <a href="http://www.kaom.net/dm_map.php"><span style="color: orange">✿</span> 地名·全國</a>
+            <a href="http://www.kaom.net/dm_ng.php"><span style="color: orange">✿</span> 地名·吳語</a>
+            <a href="http://www.kaom.net/si_about.php">簡介</a>
+        </div>
+    </div>
+    <div class="dropdown" bis_skin_checked="1">
+        <button type="button" class="dropbtn">工具書 ▼</button>
+        <div class="dropdown-content" bis_skin_checked="1">
+            <a href="http://www.kaom.net/word.php">韻書38種</a>
+            <a href="http://www.kaom.net/book_xungu.php">訓詁32種</a>
+            <a href="http://www.kaom.net/book_vot.php">沙門10種</a>
+            <a href="http://www.kaom.net/book_jian.php">簡帛11種</a>
+            <a href="http://www.kaom.net/mzy_word.php">民族語15種</a>
+            <a href="http://www.kaom.net/book_jiajie.php">通假字12種</a>
+            <a href="http://www.kaom.net/book_hanyudacidian.php">漢語大詞典</a>
+            <a href="http://www.kaom.net/book_fangyandacidian.php">方言大詞典</a>
+            <a href="http://www.kaom.net/book_minqingwuyucidian.php">明清吳語詞典</a>
+            <a href="http://www.kaom.net/zgy_dw.php"><span style="color: orange">✿</span> 廣韻·集韻</a>
+            <a href="http://www.kaom.net/sgy_bzd.php"><span style="color: orange">✿</span> 廣韻形聲考</a>
+            <a href="http://www.kaom.net/sgy_jiyunshengxi.php"><span style="color: orange">✿</span> 集韻聲系</a>
+            <a href="http://www.kaom.net/zgy_ypcj.php">玉篇殘卷</a>
+            <a href="http://www.kaom.net/book_jjzg.php">經籍籑詁</a>
+            <a href="http://www.kaom.net/zgy_jdsw.php">經典釋文</a>
+            <a href="http://www.kaom.net/font_jianhua_hbz.php">簡化合併字表</a>
+            <a href="http://www.kaom.net/font_jianhua_txz.php">簡化同形字表</a>
+            <a href="http://www.kaom.net/font.php"><span style="color: orange">🔧</span> 部件輸入法</a>
+            <a href="http://www.kaom.net/tool.php"><span style="color: orange">🔧</span> 小功能</a>
+
+        </div>
+    </div>
+
+</div>
+
+
+<div style="font-size: 12px;color: #aa334c;font-weight: bold;margin: 0px auto 20px auto;text-align: center;background: #eee;padding: 5px 5%;" bis_skin_checked="1">
+提示：近來機器人較多、網站若有停頓、請隔0.5-1小時後再訪問
+</div>
+
+
+
+
+<style>
+    td{
+        padding: 5px 2px;
+    }
+</style>
+
+<table style="max-width: 920px"><tbody><tr><th>語言點</th><th>字音數</th><th>有效字音數（去除中古多音字、用於以下繪圖）</th></tr><tr><td><a href="http://www.kaom.net/si_box8.php?c=A370">閩語 廣東中山隆都二</a></td><td>4889</td><td>4171</td></tr><tr><td colspan="3" style="font-size: 12px;color: #aa334c;padding: 2px 0px;line-height: 16px">提示：該功能不計《廣韻》多音字、可點擊線條查看轄字</td></tr><tr><td colspan="3" style="background: #fff"><script type="text/javascript" src="./各地漢語方言古今演化_files/echarts.min.js.download"></script><div id="hanzang" style="width: 100%; margin: 0px auto; height: 650px; -webkit-tap-highlight-color: transparent; user-select: none; background: transparent;" _echarts_instance_="ec_1727997522946" bis_skin_checked="1"><div bis_skin_checked="1" style="position: relative; overflow: hidden; width: 914px; height: 650px; padding: 0px; margin: 0px; border-width: 0px; cursor: pointer;"><canvas data-zr-dom-id="zr_0" width="914" height="650" style="position: absolute; left: 0px; top: 0px; width: 914px; height: 650px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div><script type="text/javascript">var myChart = echarts.init(document.getElementById("hanzang"));myChart.on("click",function(e) {window.open(e.data.url);});option = {series: {type: "sankey", left:"50px",right:"80px",top:"30px",bottom:"30px",layout: "none", focusNodeAdjacency: "allEdges", data: [{name: '入 '},{name: '55-陽入'},{name: '11-上陰入'},{name: '33-下陰入'},{name: '零'},{name: '33-上陰入'},{name: '55-陰平'},{name: '24-上'},{name: '33-陽平'},{name: '11-下陰入'},{name: '31-下陰入'},{name: '平 '},{name: '33-陰平'},{name: '31-陽去'},{name: '11-陰平'},{name: '11-陰去'},{name: '5-陰平'},{name: '33-陽去'},{name: '31-陽平'},{name: '上 '},{name: '42-上'},{name: '4-上'},{name: '31-上'},{name: '去 '},{name: '333-陽平'},{name: '31-陰去'},], links: [{source: '入 ',target: '55-陽入',value: 238,url:'si_history88.php?k1=%E5%85%A5+&k2=55-%E9%99%BD%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '11-上陰入',value: 114,url:'si_history88.php?k1=%E5%85%A5+&k2=11-%E4%B8%8A%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '33-下陰入',value: 386,url:'si_history88.php?k1=%E5%85%A5+&k2=33-%E4%B8%8B%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '零',value: 2,url:'si_history88.php?k1=%E5%85%A5+&k2=%E9%9B%B6&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '33-上陰入',value: 2,url:'si_history88.php?k1=%E5%85%A5+&k2=33-%E4%B8%8A%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '55-陰平',value: 3,url:'si_history88.php?k1=%E5%85%A5+&k2=55-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '24-上',value: 7,url:'si_history88.php?k1=%E5%85%A5+&k2=24-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '33-陽平',value: 4,url:'si_history88.php?k1=%E5%85%A5+&k2=33-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '11-下陰入',value: 2,url:'si_history88.php?k1=%E5%85%A5+&k2=11-%E4%B8%8B%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '入 ',target: '31-下陰入',value: 1,url:'si_history88.php?k1=%E5%85%A5+&k2=31-%E4%B8%8B%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '55-陰平',value: 763,url:'si_history88.php?k1=%E5%B9%B3+&k2=55-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '24-上',value: 16,url:'si_history88.php?k1=%E5%B9%B3+&k2=24-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '33-陰平',value: 2,url:'si_history88.php?k1=%E5%B9%B3+&k2=33-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '31-陽去',value: 568,url:'si_history88.php?k1=%E5%B9%B3+&k2=31-%E9%99%BD%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '33-陽平',value: 300,url:'si_history88.php?k1=%E5%B9%B3+&k2=33-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '11-陰平',value: 1,url:'si_history88.php?k1=%E5%B9%B3+&k2=11-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '55-陽入',value: 4,url:'si_history88.php?k1=%E5%B9%B3+&k2=55-%E9%99%BD%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '11-陰去',value: 10,url:'si_history88.php?k1=%E5%B9%B3+&k2=11-%E9%99%B0%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '5-陰平',value: 1,url:'si_history88.php?k1=%E5%B9%B3+&k2=5-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '11-上陰入',value: 1,url:'si_history88.php?k1=%E5%B9%B3+&k2=11-%E4%B8%8A%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '33-陽去',value: 1,url:'si_history88.php?k1=%E5%B9%B3+&k2=33-%E9%99%BD%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '平 ',target: '31-陽平',value: 1,url:'si_history88.php?k1=%E5%B9%B3+&k2=31-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '31-陽去',value: 45,url:'si_history88.php?k1=%E4%B8%8A+&k2=31-%E9%99%BD%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '33-陽平',value: 102,url:'si_history88.php?k1=%E4%B8%8A+&k2=33-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '24-上',value: 569,url:'si_history88.php?k1=%E4%B8%8A+&k2=24-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '55-陰平',value: 13,url:'si_history88.php?k1=%E4%B8%8A+&k2=55-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '11-陰去',value: 6,url:'si_history88.php?k1=%E4%B8%8A+&k2=11-%E9%99%B0%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '42-上',value: 4,url:'si_history88.php?k1=%E4%B8%8A+&k2=42-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '4-上',value: 2,url:'si_history88.php?k1=%E4%B8%8A+&k2=4-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '33-下陰入',value: 2,url:'si_history88.php?k1=%E4%B8%8A+&k2=33-%E4%B8%8B%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '31-上',value: 1,url:'si_history88.php?k1=%E4%B8%8A+&k2=31-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '上 ',target: '55-陽入',value: 1,url:'si_history88.php?k1=%E4%B8%8A+&k2=55-%E9%99%BD%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '33-陽平',value: 617,url:'si_history88.php?k1=%E5%8E%BB+&k2=33-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '11-陰去',value: 183,url:'si_history88.php?k1=%E5%8E%BB+&k2=11-%E9%99%B0%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '31-陽去',value: 133,url:'si_history88.php?k1=%E5%8E%BB+&k2=31-%E9%99%BD%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '333-陽平',value: 1,url:'si_history88.php?k1=%E5%8E%BB+&k2=333-%E9%99%BD%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '33-下陰入',value: 4,url:'si_history88.php?k1=%E5%8E%BB+&k2=33-%E4%B8%8B%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '55-陽入',value: 1,url:'si_history88.php?k1=%E5%8E%BB+&k2=55-%E9%99%BD%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '24-上',value: 38,url:'si_history88.php?k1=%E5%8E%BB+&k2=24-%E4%B8%8A&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '55-陰平',value: 19,url:'si_history88.php?k1=%E5%8E%BB+&k2=55-%E9%99%B0%E5%B9%B3&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '11-上陰入',value: 2,url:'si_history88.php?k1=%E5%8E%BB+&k2=11-%E4%B8%8A%E9%99%B0%E5%85%A5&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},{source: '去 ',target: '31-陰去',value: 1,url:'si_history88.php?k1=%E5%8E%BB+&k2=31-%E9%99%B0%E5%8E%BB&c=A370&b=&d=&n=&e=&f=&g=g&qingzhuo=&wei=&jinyin=diao'},],}};myChart.setOption(option);</script></td></tr></tbody></table>
+<div style="margin: 30px auto;text-align: center;font-size: 12px;color: #888" bis_skin_checked="1">
+    <img src="./各地漢語方言古今演化_files/guyinxiaojings.png" style="height: 24px;margin-bottom: 5px">　
+    <div bis_skin_checked="1"><a href="https://beian.miit.gov.cn/" style="color:#888;text-decoration:none">蘇ICP備17001294號</a> | 0.83MB 10.7MB 0.04s | 材料如有冒犯通知即刪</div>
+</div>
+
+
+</body></html>
